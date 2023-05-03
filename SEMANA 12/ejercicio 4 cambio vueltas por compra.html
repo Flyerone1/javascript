@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vueltas por compra </title>
+</head>
+<body>
+    <h2>SUPERMERCADO EL VACANO</h2>
+    <h3>VUELTAS/CAMBIO COMPRAS</h3>
+    <script>
+        //Programa que permita capturar el nombre de un producto, su precio unitario y su cantidad, luego calcular total a pagar, muéstrelo por una mensaje de alerta al usuario, luego permita la captura del monto en efectivo pagado y validar cancelación total del monto de la factura, finalmente enviar mensaje Gracias por su compra//
+        //Entrada
+        producto=prompt("ingrese nombre de producto:");
+        precio=parseInt(prompt("ingrese precio unitario:"));
+        cantidad=parseInt(prompt("ingrese cantidad comprada:"));
+        //proceso
+        total=cantidad*precio;
+        //salida
+        alert("su valor a pagar es ..." + "\n"+ total);
+        document.write("su valo a pagar es ... "+ total +"<br>"+"<br>");
+        //validacion del monto a pagar encaja 
+        pago=parseInt(prompt("ingrese monto efectivo pagado en caja"));
+        saldo=total-pago;
+        //condicional si para verificar si hay vuektas x cambio
+        if (pago==total){
+            alert("tome su tirilla de pago, gracias por su compra");
+        }else{
+            alert("tome su tirilla de pago, y sus vueltas..$" +saldo+ "\n" +"gracias por su compra");
+        }
+        document.write("****************************************************")
+
+
+    </script>
+    
+    
+</body>
+</html>

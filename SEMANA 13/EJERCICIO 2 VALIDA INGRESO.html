@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<!-- link de sitio Sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>VALIDACION DE INGRESO DE SESION</h1>
+        <h3>Usuario tendra tres intentos de ingreso a sesion </h3>
+        <script>
+            let datof;//clave ingresada por usuario 
+            let sw=0;//switch apagado 
+            let clave=123;
+            //ciclo for 
+            for(f=1;f<=3;f++){
+                datof=parseInt(prompt("ingrese contraseña de ingreso."));
+                if (datof==clave){
+                    swal("estimado usuario","acceso permitido","success");
+                    document.write("acceso permitido");
+                    sw=1;//switch prendido(ingreso a sesion)
+                    break;
+                }
+            }
+            //validacion de ingreso
+            if (sw==0){
+                swal("estimado usuario","cuenta bloqueada","error");
+                document.write("cuenta bloqueada")
+            }
+        </script>
+    </center>
+    
+</body>
+</html>
